@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGURK SIN BUTTTIIIIIKKK</title>
+    <style>
+        /* Fargepalett */
+        :root {
+            --primar-farge: #333;
+            --sekundar-farge: #666;
+            --bakgrunn-farge: #f7f7f7;
+            --tekst-farge: #333;
+            --hover-farge: #808080;
+        }
+
+        /* Typografi */
+        body {
+            
+            background-color: #808080; 
+
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--tekst-farge);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1, h2, h3 {
+            font-weight: bold;
+            color: var(--primar-farge);
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        /* Header */
+        header {
+                    
+            position: sticky;
+            top: 0;
+            background-color: #808080;
+            padding: 20px;
+            display: flex;
+            justify-content: flex-start; 
+            align-items: center;
+        }
+
+        header .sok {
+            width: 14em;
+            height: 2.5em;
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            margin-right: 20px; 
+        }
+
+        header .sok input {
+            width: 80%;
+            height: 100%;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            background-color: inherit;
+        }
+
+        header .sok .sok-symbol {
+            font-size: 18px;
+            margin-left: 10px;
+            padding: 5px;
+            border: 1px solid #000000;
+        }
+
+        header .meny {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .meny ul li {
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        header .logo {
+            font-size: 36px;
+            font-weight: 900;
+            margin-left: 20px; 
+        }
+
+        header .meny a {
+            color: var(--tekst-farge);
+            text-decoration: none;
+        }
+
+        header .meny a:hover {
+            color: var(--hover-farge);
+        }
+
+        header .shopping-ikon {
+            font-size: 24px;
+            margin-left: 20px;
+        }
+
+                
+           
+
+        
+        
+
+          
+        
+
+            
+
+        /* Hovedområde */
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+       
+            
+           /* Seksjon 1: Banner */
+            .banner {
+               
+                
+                    width: 100%;
+                    height: 300px; 
+                    position: relative;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+            }
+
+                .slider {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    position: relative;
+            }
+
+                .slides {
+                    display: flex;
+                    transition: transform 0.5s ease-in-out;
+                    width: 300%;
+            }
+
+                .slide {
+                    width: 33.33%;
+                    height: 100%;
+                    background-size: cover;
+                    background-position: center;
+            }
+
+                input[type="radio"] {
+                    display: none;
+            }
+
+                #slide1:checked ~ .slider .slides {
+                    transform: translateX(0%);
+            }
+
+                #slide2:checked ~ .slider .slides {
+                    transform: translateX(-33.33%);
+            }
+
+                #slide3:checked ~ .slider .slides {
+                    transform: translateX(-66.66%);
+            }
+
+                /* Pilene */
+                .arrow {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 2rem;
+                    color: white;
+                    background: rgba(0, 0, 0, 0.5);
+                    padding: 10px;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    z-index: 2;
+            }
+
+                .left {
+                    left: 10px;
+            }
+
+                .right {
+                    right: 10px;
+            }
+
+                .arrow:hover {
+                    background: rgba(0, 0, 0, 0.8);
+            }
+
+                .banner-content {
+                    position: absolute;
+                    z-index: 1;
+                    color: #fff;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    padding: 10px 20px;
+                    border-radius: 8px;
+            }
+
+            
+
+            /* Seksjon 2: Våre mest populære produkter */
+            #produkter {
+                display: block;
+                padding: 2rem;
+                background-color: #f8f8f8;
+            }
+
+            #produkter h2 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            #produkter p {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .kategori-bokser {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+            }
+
+            .kategori-boks {
+                background-color: #f7f7f7;
+                padding: 5px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                width: 80px;
+                height: 40px;
+                text-align: center;
+            }
+
+            .kategori-boks h3 {
+                font-size: 12px;
+                margin-bottom: 0;
+            }
+
+            .produktkort-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .produktkort {
+                max-width: 350px;
+                margin: 1rem;
+                padding: 1rem;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                flex: 1 1 30%;
+            }
+
+            .produktkort img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .produktkort h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .produktkort p {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .anmeldelser {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .stjerner {
+                font-size: 18px;
+                color: #ffd700;
+                margin-right: 10px;
+            }
+
+            .antall-anmeldelser {
+                font-size: 14px;
+                color: #666;
+            }
+
+
+        /* Seksjon 3: Våre mest populære kategorier */
+        #kategorier {
+            
+            padding: 3rem;
+            text-align: center;
+        }
+
+        #kategorier h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        #kategorier p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .kategori-bokser {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Default for desktop */
+            gap: 20px;
+        }
+
+        /* Kategoriboksene */
+        .kategori-boks {
+            background-color: #fff; 
+            color: #000;  
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid #000; 
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .kategori-boks img {
+            max-width: 100%;  
+            height: auto;
+            object-fit: cover; 
+            border-radius: 5px;
+            margin-bottom: 1rem;  
+        }
+
+        .kategori-boks h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        /* Kategorikort 1, 2, 3 maks bredde 386px */
+        .kategori-boks:nth-child(1),
+        .kategori-boks:nth-child(2),
+        .kategori-boks:nth-child(3) {
+            max-width: 386px;
+        }
+
+        /* Kategorikort 4 maks bredde 864px */
+        .kategori-boks:nth-child(4) {
+            max-width: 864px;
+        }
+
+        /* Kategorikort 5 maks bredde 300px */
+        .kategori-boks:nth-child(5) {
+            max-width: 300px;
+        }
+
+        /* Responsivt oppsett for mobil (1 kolonne) */
+        @media (max-width: 768px) {
+            .kategori-bokser {
+                grid-template-columns: 1fr;
+            }
+
+            .kategori-boks {
+                max-width: 100%;
+                margin: 0 auto; 
+            }
+        }
+
+        /* Responsivt oppsett for smarttelefon (mellomstor skjerm) */
+        @media (max-width: 1024px) {
+            .kategori-bokser {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+        }
+
+        /* Desktop oppsett for flere kolonner */
+        @media (min-width: 1200px) {
+            .kategori-bokser {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+        }
+
+           
+         
+            
+        
+
+        /* Seksjon 4: Anmeldelser */
+        #anmeldelser {
+            
+        
+            padding: 3rem;
+            text-align: center;
+        }
+
+        #anmeldelser h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        #anmeldelser p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .anmeldelse-bokser {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Anmeldelseskortene */
+        .anmeldelse-boks {
+            background-color: #fff;  
+            border: 2px solid #000;  
+            border-radius: 10px;
+            width: 100%; 
+            max-width: 289px; 
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left; 
+            box-sizing: border-box;
+        }
+
+        .anmeldelse-boks img {
+            width: 150px; 
+            height: auto;
+            border-radius: 50%; 
+            margin-bottom: 1rem;  
+        }
+
+        .anmeldelse-boks h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 0;
+            text-align: center;  
+        }
+
+        .anmeldelse-boks p {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Responsivt oppsett for mobil (1 kolonne) */
+        @media (max-width: 768px) {
+            .anmeldelse-bokser {
+                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        /* Responsivt oppsett for smarttelefon (mellomstor skjerm) */
+        @media (max-width: 1024px) {
+            .anmeldelse-bokser {
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+
+        /* Desktop oppsett for flere kolonner */
+        @media (min-width: 1200px) {
+            .anmeldelse-bokser {
+                flex-direction: row;
+                justify-content: space-between;  
+            }
+        }
+
+            
+
+        /* Footer */
+        footer {
+        
+            padding: 2rem;
+            background-color: #f7f7f7;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Seksjon 1: Logo og ingress */
+        #footer-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        #footer-logo .footer-logo {
+            width: 150px; /* Logo størrelse */
+            margin-bottom: 1rem;
+        }
+
+        #footer-logo p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        
+        footer section {
+            margin-bottom: 2rem;
+        }
+
+        footer h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Seksjon 2: Kontakt */
+        #footer-kontakt ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #footer-kontakt li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Seksjon 3: Snarveier */
+        #footer-snarveier ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #footer-snarveier li {
+            margin-bottom: 0.5rem;
+        }
+
+        #footer-snarveier a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        #footer-snarveier a:hover {
+            text-decoration: underline;
+        }
+
+        /* Seksjon 4: Sosiale medier */
+        #footer-sosiale ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #footer-sosiale li {
+            margin-bottom: 0.5rem;
+        }
+
+        #footer-sosiale a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        #footer-sosiale a:hover {
+            text-decoration: underline;
+        }
+
+        
+        @media (min-width: 768px) {
+            footer {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 2rem;
+            }
+
+            #footer-kontakt, #footer-snarveier, #footer-sosiale {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            footer {
+                grid-template-columns: 1fr 1fr 1fr 1fr; 
+            }
+
+            #footer-kontakt, #footer-snarveier, #footer-sosiale {
+                display: block;
+            }
+        }
+
+            
+
+             
+                    </style>
+                </head>
+                <body>
+                    <!-- Header -->
+                    <header>
+                        <!-- Søkeboks helt til venstre -->
+                        <div class="sok">
+                          <input type="search" placeholder="Søk...">
+                          <span class="sok-symbol">&#x1F50D;</span>
+                        </div>
+                      
+                        <nav class="meny">
+                          <ul>
+                            <li><a href="#">Hjem</a></li>
+                            <li><a href="#">Produkter</a></li>
+                          </ul>
+                        </nav>
+                        
+                        <!-- Logo plasseres mellom Produkter og Kategorier -->
+                        <div class="logo">LOGO</div> 
+                      
+                        <nav class="meny">
+                          <ul>
+                            <li><a href="#">Kategorier</a></li>
+                            <li><a href="#">Kontakt oss</a></li>
+                          </ul>
+                        </nav>
+                        
+                        <div class="shopping-ikon">&#x1F6D2;</div>
+                      </header>
+                      
+                       
+                      
+                      
+                    
+                
+                    <!-- Hovedområde -->
+                                        <!-- Banner -->
+                    <section id="banner" class="banner">
+                        <!-- Slider med bilder -->
+                        <div class="slider">
+                            <!-- Radio buttons for navigasjon -->
+                            <input type="radio" id="slide1" name="slider" checked>
+                            <input type="radio" id="slide2" name="slider">
+                            <input type="radio" id="slide3" name="slider">
+                            
+                            <div class="slides">
+                                <div class="slide" style="background-image: url();"></div>
+                                <div class="slide" style="background-image: url();"></div>
+                                <div class="slide" style="background-image: url();"></div>
+                            </div>
+                            <!-- Piler for navigering -->
+                            <label for="slide1" class="arrow left">&#8592;</label>
+                            <label for="slide2" class="arrow right">&#8594;</label>
+                        </div>
+                        
+                        
+                        
+                        <!-- Tekstinnhold -->
+                        <div class="banner-content">
+                            <h1>Magurk sin shop</h1>
+                            <p>Hei, velkommen til agurkbutikken, følg med for et spennende eventyr i klesskapet til magurk.</p>
+                        </div>
+                    </section>
+
+                    <!-- Våre mest populære produkter -->
+                    <section id="produkter">
+                        <h2>Magurk sine mest populære produkter</h2>
+                        <p>Her er det plass til alle agurkstiler</p>
+                        <!-- Kategoribokser -->
+                        <div class="kategori-bokser">
+                            <div class="kategori-boks">
+                                <h3>Nye produkter</h3>
+                            </div>
+                            <div class="kategori-boks">
+                                <h3>Tilbud</h3>
+                            </div>
+                            <div class="kategori-boks">
+                                <h3>Best seller</h3>
+                            </div>
+                        </div>
+
+                        <!-- Produktkort -->
+                        <div class="produktkort-container">
+                            <div class="produktkort">
+                                <img src="produkt1.jpg" alt="Produkt 1">
+                                <h3>Produkt 1</h3>
+                                <p>Pris: 299,-</p>
+                                <div class="anmeldelser">
+                                    <span class="stjerner">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                    <span class="antall-anmeldelser">(12 anmeldelser)</span>
+                                </div>
+                            </div>
+                            <div class="produktkort">
+                                <img src="produkt2.jpg" alt="Produkt 2">
+                                <h3>Produkt 2</h3>
+                                <p>Pris: 399,-</p>
+                                <div class="anmeldelser">
+                                    <span class="stjerner">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                    <span class="antall-anmeldelser">(12 anmeldelser)</span>
+                                </div>
+                            </div>
+                            <div class="produktkort">
+                                <img src="produkt3.jpg" alt="Produkt 3">
+                                <h3>Produkt 3</h3>
+                                <p>Pris: 499,-</p>
+                                <div class="anmeldelser">
+                                    <span class="stjerner">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                    <span class="antall-anmeldelser">(12 anmeldelser)</span>
+                                </div>
+                            </div>
+                            <div class="produktkort">
+                                <img src="produkt4.jpg" alt="Produkt 4">
+                                <h3>Produkt 4</h3>
+                                <p>Pris: 599,-</p>
+                                <div class="anmeldelser">
+                                    <span class="stjerner">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                    <span class="antall-anmeldelser">(12 anmeldelser)</span>
+                                </div>
+                            </div>
+                            <div class="produktkort">
+                                <img src="produkt5.jpg" alt="Produkt 5">
+                                <h3>Produkt 5</h3>
+                                <p>Pris: 699,-</p>
+                                <div class="anmeldelser">
+                                    <span class="stjerner">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                    <span class="antall-anmeldelser">(12 anmeldelser)</span>
+                                </div>
+                            </div>
+                            <div class="produktkort">
+                                <img src="produkt6.jpg" alt="Produkt 6">
+                                <h3>Produkt 6</h3>
+                                <p>Pris: 799,-</p>
+                                <div class="anmeldelser">
+                                    <span class="stjerner">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                    <span class="antall-anmeldelser">(12 anmeldelser)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+ 
+                        
+
+                        
+                
+                        
+                        
+                            
+                        
+                
+                        <!-- Kategorier -->
+                        <section id="kategorier">
+                            <h2>Våre mest populære kategorier</h2>
+                            <p>Utforsk våre beste kategorier med et bredt utvalg agurkstiler!</p>
+                            <div class="kategori-bokser">
+                                <div class="kategori-boks">
+                                    <img src="kategori1.jpg" alt="Kategori 1">
+                                    <h3>Agurkstil 1</h3>
+                                </div>
+                                <div class="kategori-boks">
+                                    <img src="kategori2.jpg" alt="Kategori 2">
+                                    <h3>Agurkstil 2</h3>
+                                </div>
+                                <div class="kategori-boks">
+                                    <img src="kategori3.jpg" alt="Kategori 3">
+                                    <h3>Agurkstil 3</h3>
+                                </div>
+                                <div class="kategori-boks">
+                                    <img src="kategori4.jpg" alt="Kategori 4">
+                                    <h3>Agurkstil 4</h3>
+                                </div>
+                                <div class="kategori-boks">
+                                    <img src="kategori5.jpg" alt="Kategori 5">
+                                    <h3>Agurkstil 5</h3>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        
+
+                
+                        <!-- Anmeldelser -->
+                        <section id="anmeldelser">
+                            <h2>Hva våre kunder sier</h2>
+                            <p>Les hva våre kunder synes om produktene våre!</p>
+                            <div class="anmeldelse-bokser">
+                                <div class="anmeldelse-boks">
+                                    <img src="kunde1.jpg" alt="Kunde 1">
+                                    <h3>Magurk er fantastisk!</h3>
+                                    <p>Jeg elsker de ulike stilene Magurk har å tilby. Kvaliteten er utrolig bra og jeg får alltid de nyeste trendene. Anbefales på det sterkeste!</p>
+                                </div>
+                                <div class="anmeldelse-boks">
+                                    <img src="kunde2.jpg" alt="Kunde 2">
+                                    <h3>Veldig bra opplevelse</h3>
+                                    <p>Fantastisk service og rask levering. Jeg er kjempefornøyd med produktene, og kundeservicen var topp. Kommer til å handle her igjen!</p>
+                                </div>
+                                <div class="anmeldelse-boks">
+                                    <img src="kunde3.jpg" alt="Kunde 3">
+                                    <h3>Utrolig kvalitet!</h3>
+                                    <p>De klærne jeg kjøpte har fantastisk kvalitet, og de passer perfekt. Jeg anbefaler sterkt å handle her hvis du er ute etter stilige og komfortable klær!</p>
+                                </div>
+                                <div class="anmeldelse-boks">
+                                    <img src="kunde4.jpg" alt="Kunde 4">
+                                    <h3>Elsker stilen!</h3>
+                                    <p>Magurk har de beste klærne, og jeg elsker hvordan de holder seg til de nyeste trendene. En veldig positiv opplevelse!</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                                            <!-- Footer -->
+                                            <footer>
+                                                <!-- Seksjon 1: Logo og ingress -->
+                                                <section id="footer-logo">
+                                                    <img src="logo.png" alt="Logo" class="footer-logo">
+                                                    <p>Magurk er din ultimate destinasjon for stilige klær og kvalitet! Vi tilbyr det beste innen agurkstilene.</p>
+                                                </section>
+                                            
+                                                <!-- Seksjon 2: Kontakt -->
+                                                <section id="footer-kontakt">
+                                                    <h3>Kontakt</h3>
+                                                    <ul>
+                                                        <li>Adresse: Agurkveien 12, 1234 Oslo</li>
+                                                        <li>Telefon: +47 123 45 678</li>
+                                                        <li>E-post: info@magurk.no</li>
+                                                    </ul>
+                                                </section>
+                                            
+                                                <!-- Seksjon 3: Snarveier -->
+                                                <section id="footer-snarveier">
+                                                    <h3>Snarveier</h3>
+                                                    <ul>
+                                                        <li><a href="#">Hjem</a></li>
+                                                        <li><a href="#">Produkter</a></li>
+                                                        <li><a href="#">Om oss</a></li>
+                                                        <li><a href="#">Kundeservice</a></li>
+                                                    </ul>
+                                                </section>
+                                            
+                                                <!-- Seksjon 4: Sosiale Medier -->
+                                                <section id="footer-sosiale">
+                                                    <h3>Sosiale Medier</h3>
+                                                    <ul>
+                                                        <li><a href="https://www.instagram.com">Instagram</a></li>
+                                                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                                                        <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                                                        <li><a href="https://www.pinterest.com">Pinterest</a></li>
+                                                    </ul>
+                                                </section>
+                                            </footer>
+                                            
+                                               
+                                        
